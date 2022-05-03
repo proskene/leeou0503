@@ -1,8 +1,19 @@
 #include <iostream>
 
+namespace NameSpace1 {int a = 10;}
+namespace NameSpace2 { int a = 20;}
+int a = 30;
+namespace NameSpace1 { int b = 50; }
+
+using namespace std;
+
 int main()
 {
-	// 표준 출력 스트림으로 문장을 출력함
-	std::cout << "나의 첫 번째 C++ 프로그램" << std::endl;
+	int a = 40;
+	cout << NameSpace1::a << endl;
+	cout << NameSpace2::a << endl;
+	cout << ::a << endl;
+	cout << a << endl;
+	cout << NameSpace1::b << endl;
 	return 0;
 }
